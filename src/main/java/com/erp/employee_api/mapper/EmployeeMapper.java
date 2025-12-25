@@ -12,9 +12,9 @@ import com.erp.employee_api.dto.EmployeeResponse;
 public interface EmployeeMapper {
 
     @Mapping(target = "id", ignore = true)
-    @Mapping(target = "createdAt", ignore = true) // Deja que Spring Audit lo maneje
-    @Mapping(target = "updatedAt", ignore = true) // Deja que Spring Audit lo maneje
-    @Mapping(target = "phone", ignore = true) // Ignora phone porque no viene en el Request
+    @Mapping(target = "createdAt", ignore = true)
+    @Mapping(target = "updatedAt", ignore = true)
+    @Mapping(target = "phone", ignore = true)
     Employee toEntity(EmployeeRequest request);
 
     EmployeeResponse toResponse(Employee employee);
