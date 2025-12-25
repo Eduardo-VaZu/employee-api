@@ -1,9 +1,10 @@
 package com.erp.employee_api.entity;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedBy;
+import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import jakarta.persistence.*;
@@ -23,7 +24,7 @@ public class Employee {
     private Long id;
 
     @Column(name = "first_name", nullable = false, length = 100)
-    private String firtname;
+    private String firstname;
 
     @Column(name = "last_name", nullable = false, length = 100)
     private String lastname;
@@ -35,13 +36,13 @@ public class Employee {
     private String email;
 
     @Column(name = "salary", nullable = false)
-    private Double salary;
+    private BigDecimal salary;
 
     @CreatedDate
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
-    @LastModifiedBy
+    @LastModifiedDate
     @Column(name = "updated_at", nullable = false)
     private LocalDateTime updatedAt;
 
