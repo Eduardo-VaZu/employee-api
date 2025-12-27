@@ -14,7 +14,7 @@ public interface EmployeeMapper {
     @Mapping(target = "id", ignore = true)
     @Mapping(target = "createdAt", ignore = true)
     @Mapping(target = "updatedAt", ignore = true)
-    @Mapping(target = "phone", ignore = true)
+
     Employee toEntity(EmployeeRequest request);
 
     EmployeeResponse toResponse(Employee employee);
@@ -22,6 +22,6 @@ public interface EmployeeMapper {
     @Mapping(target = "id", ignore = true)
     @Mapping(target = "createdAt", ignore = true)
     @Mapping(target = "updatedAt", ignore = true)
-    @Mapping(target = "phone", ignore = true)
+
     void updateEntityFromRequest(EmployeeRequest request, @MappingTarget Employee employee);
 }

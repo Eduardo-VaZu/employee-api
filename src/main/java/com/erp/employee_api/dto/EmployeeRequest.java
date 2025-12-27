@@ -7,16 +7,13 @@ import jakarta.validation.constraints.Positive;
 
 public record EmployeeRequest(
 
-        @NotBlank(message = "First name is required") 
-        String firstname,
+                @NotBlank(message = "First name is required") String firstname,
 
-        @NotBlank(message = "Last name is required") 
-        String lastname,
+                @NotBlank(message = "Last name is required") String lastname,
 
-        @NotBlank(message = "Email is required") 
-        String email,
+                String phone,
 
-        @NotBlank(message = "Salary is required") 
-        @Positive(message = "Salary must be greater than 0") 
-        BigDecimal salary) {
+                @NotBlank(message = "Email is required") String email,
+
+                @NotBlank(message = "Salary is required") @Positive(message = "Salary must be greater than 0") BigDecimal salary) {
 }
