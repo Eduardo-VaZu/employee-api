@@ -8,6 +8,7 @@ public record EmployeeResponse(
                 String firstname,
                 String lastname,
                 String email,
+                String phone,
                 BigDecimal salary,
                 LocalDateTime createdAt,
                 LocalDateTime updatedAt) {
