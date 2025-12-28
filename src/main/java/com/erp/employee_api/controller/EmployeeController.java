@@ -49,6 +49,7 @@ public class EmployeeController {
     }
 
     @GetMapping
+    @Operation(summary = "Get all employees", description = "Get all employees")
     public Page<EmployeeResponse> getAllEmployees(Pageable pageable) {
         return employeeService.getAllEmployees(pageable);
     }
